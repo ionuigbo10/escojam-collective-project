@@ -43,6 +43,14 @@ header {
     background-repeat: no-repeat;
 }
 
+#heroabout {
+    min-height: 90vh;
+    background-image: url("../images/heroabout.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .navbar {
     padding: 1rem;
 }
@@ -101,23 +109,60 @@ header {
 
 .jam-details h3 {
     margin-bottom: 1rem;
+
 }
+
+/*About section styles*/
+
+/*Carousel styles*/
+
+#carouselExampleCaptions .carousel-item img {
+    height: 500px;
+    object-fit: contain;
+    background-color: #181818;
+}
+
+@media (max-width: 767.98px) {
+    #carouselExampleCaptions .carousel-item img {
+        height: 350px;
+    }
+}
+
 /*gallery styles*/
 
 .gallery-page {
-    padding-top: 140px;
+    padding-top: 30px;
     color: #f4ebdd;
+}
+
+.gallery-grid {
+    columns: 3;
+    column-gap: 1rem;
+}
+
+.gallery-grid > .col {
+    break-inside: avoid;
+    margin-bottom: 1rem;
 }
 
 .gallery-photo {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
     border-radius: 8px;
 }
 
+@media (max-width: 991.98px) {
+    .gallery-grid {
+        columns: 2;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .gallery-grid {
+        columns: 1;
+    }
+}
 /*footer styles */
 
 .site-footer {
@@ -204,7 +249,7 @@ header {
 }
 
 /* Stack and align left on smaller screens */
-@media (max-width: 767.98px) 
+@media (max-width: 767.98px) {
     .footer-branding {
         text-align: left;
     }
@@ -212,3 +257,4 @@ header {
     .footer-socials {
         justify-content: flex-start;
     }
+}
