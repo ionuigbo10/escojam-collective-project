@@ -14,6 +14,11 @@ h1 {
     margin-top: 2rem;
 }
 
+#red-text {
+    color: red;
+    font-size: 1.5em;
+}
+
 header {
     position: absolute;
     top: 0;
@@ -23,9 +28,44 @@ header {
 }
 
 #hero {
-    min-height: 70vh;
+    min-height: 100vh;
     background-image: url("../images/hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+}
+
+#events {
+    padding-inline: 1rem;
+    color: #f4ebdd;
+}
+.jam-panel {
+    background-color: #181818;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.jam-poster {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.jam-details {
+    padding: 1.5rem;
+}
+
+.jam-details h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.jam-details h3 {
+    margin-bottom: 1rem;
+}
+
