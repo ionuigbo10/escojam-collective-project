@@ -40,13 +40,17 @@ header {
     width: auto;
 }
 
+.navbar .nav-link:hover {
+    color: #ff3535;
+}
+
 #events {
     padding-inline: 1rem;
     color: #f4ebdd;
 }
 .jam-panel {
     background-color: #181818;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 1rem;
 }
 
@@ -69,3 +73,37 @@ header {
     margin-bottom: 1rem;
 }
 
+footer {
+    background-color: #181818;
+    color: #f4ebdd;
+    margin-top: 3rem;
+}
+
+.footer-brand {
+    color: #f4ebdd;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: #f4ebdd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff3535;
+}
+
+.footer-copyright {
+    border-top: 1px solid #444444;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.875rem;
+}
