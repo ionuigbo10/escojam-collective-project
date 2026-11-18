@@ -1,12 +1,10 @@
-/*google fonts*/
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sedgwick+Ave+Display&display=swap');
 
-
-body{
-    background-color:black
+body {
+    background-color: black;
     font-family: 'Inter', sans-serif;
-
-    }
+}
 
 h1 {
     font-family: 'Sedgwick Ave Display', cursive;
@@ -14,4 +12,20 @@ h1 {
     text-align: center;
     font-size: 3rem;
     margin-top: 2rem;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#hero {
+    min-height: 70vh;
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
