@@ -28,7 +28,7 @@ header {
 }
 
 #herohome {
-    min-height: 90vh;
+    min-height: 70vh;
     background-image: url("../images/hero.jpg");
     background-size: cover;
     background-position: center;
@@ -36,7 +36,7 @@ header {
 }
 
 #herogallery {
-    min-height: 90vh;
+    min-height: 70vh;
     background-image: url("../images/guitar.jpg");
     background-size: cover;
     background-position: center;
@@ -44,7 +44,7 @@ header {
 }
 
 #heroabout {
-    min-height: 90vh;
+    min-height: 70vh;
     background-image: url("../images/heroabout.jpg");
     background-size: cover;
     background-position: center;
