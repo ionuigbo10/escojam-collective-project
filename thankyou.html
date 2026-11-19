@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Escojam Collective</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Main navigation">
+            <div class="container nav-panel">
+
+                <a class="navbar-brand" href="index.html">
+                    <img
+                        src="assets/images/escojamlogo.png"
+                        alt="Escojam Collective home"
+                        class="navbar-logo"
+                    >
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#main-navigation" aria-controls="main-navigation"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="navbar-nav ms-auto gap-md-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#events">Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="action-link nav-join" href="contact.html" aria-current="page">Join us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero image -->
+        <section id="herocontact" aria-label="Escojam Collective"></section>
+
+        <section class="container py-4" aria-labelledby="contact-title">
+            <h1 id="contact-title" class="heading-underline">Contact Escojam Collective</h1>
+            <p class="reading-copy mx-auto">Email us if you have a question, would like to collaborate or ask about an upcoming event.</p>
+            <p class="text-center">
+                <a class="action-link contact-email" href="mailto:escojamcollective@gmail.com">
+                    escojamcollective@gmail.com
+                </a>
+            </p>
+        </section>
+        <section id="perform" class="container pb-5" aria-labelledby="perform-title">
+            <h2 id="perform-title" class="section-heading heading-underline mb-4">Looking to perform?</h2>
+            <p class="reading-copy mx-auto">Tell us a bit about your act and what you’d like to bring to an Escojam session.</p>
+
+            <form class="performer-form reading-copy mx-auto"
+                  action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="eb729cad-d792-4b70-a806-516ac79d21ff">
+                <input type="hidden" name="subject" value="Escojam performance enquiry">
+                <div class="mb-3">
+                    <label class="form-label" for="performer-name">Full name</label>
+                    <input type="text" class="form-control" id="performer-name" name="name"
+                           autocomplete="name" maxlength="120" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="performer-artist">Artist name (optional)</label>
+                    <input type="text" class="form-control" id="performer-artist" name="artistName" maxlength="120">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="performer-email">Email address</label>
+                    <input class="form-control" id="performer-email" name="email" type="email"
+                           autocomplete="email" maxlength="254" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="performance-type">Performance type</label>
+                    <select class="form-select" id="performance-type" name="performanceType" required>
+                        <option value="" disabled selected>Choose a performance type</option>
+                        <option>Singing / Vocalist</option>
+                        <option>Rapping / MC</option>
+                        <option>Instrumentalist</option>
+                        <option>Spoken Word / Poetry</option>
+                        <option>DJ / Live Beat Set</option>
+                        <option>Duo / Group / Band</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="performance-details">Tell us about your performance(optional)</label>
+                    <textarea class="form-control" id="performance-details" name="message" rows="4"
+                              maxlength="500" placeholder="Include your instrument, whether you’re performing with others, experience level or any equipment you’d need."></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger rounded-0">Send performance enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="site-footer">
+        <div class="container py-5 py-lg-2">
+            <div class="row g-4">
+
+                <!-- Navigation -->
+                <div class="col-12 col-md-3">
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#events">Events</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Email -->
+                <div class="col-12 col-md-5">
+                    <a
+                        href="mailto:escojamcollective@gmail.com"
+                        class="footer-email"
+                    >
+                        <i class="bi bi-envelope" aria-hidden="true"></i>
+                        <span>escojamcollective@gmail.com</span>
+                    </a>
+                </div>
+
+                <!-- Logo and social links -->
+                <div class="col-12 col-md-4 footer-branding">
+                    <a href="index.html">
+                        <img
+                            src="assets/images/escojamlogo.png"
+                            alt="Escojam Collective home"
+                            class="footer-logo"
+                        >
+                    </a>
+
+                    <div class="footer-socials">
+                        <a
+                            href="https://www.instagram.com/escojamcollective/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram (opens in a new tab)"
+                        >
+                            <i
+                                class="bi bi-instagram"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+
+                        <a
+                            href="https://www.tiktok.com/@escojamcollective"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="TikTok (opens in a new tab)"
+                        >
+                            <i
+                                class="bi bi-tiktok"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="footer-copyright mb-0">
+                &copy; 2026 Escojam Collective
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+</body>
+</html>
