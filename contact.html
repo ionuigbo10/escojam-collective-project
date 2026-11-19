@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Esco Jam Collective</title>
+    <title>Contact | Escojam Collective</title>
 
-    <link rel="icon" type="image/png" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
     <!-- Bootstrap CSS -->
     <link
@@ -28,7 +28,7 @@
 
     <header>
         <!-- Navigation -->
-        <nav class="navbar" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container nav-panel">
 
                 <a class="navbar-brand" href="index.html">
@@ -39,23 +39,31 @@
                     >
                 </a>
 
-                <ul class="navbar-nav flex-row flex-wrap gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#events">Events</a>
-                    </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#main-navigation" aria-controls="main-navigation"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="navbar-nav ms-auto gap-md-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#events">Events</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">About</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html" aria-current="page">Contact</a>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
         </nav>
@@ -65,6 +73,15 @@
         <!-- Hero image -->
         <section id="herocontact" aria-label="Escojam Collective"></section>
 
+        <section class="container py-4" aria-labelledby="contact-title">
+            <h1 id="contact-title">Contact Escojam Collective</h1>
+            <p class="reading-copy mx-auto">Email us if you’d like to perform at a jam, collaborate with the collective or ask about an upcoming event.</p>
+            <p class="text-center">
+                <a class="action-link contact-email" href="mailto:escojamcollective@gmail.com">
+                    escojamcollective@gmail.com
+                </a>
+            </p>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -77,10 +94,10 @@
                     <nav aria-label="Footer navigation">
                         <ul class="footer-menu">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="#events">Events</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="index.html#events">Events</a></li>
+                            <li><a href="index.html#about">About</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>

@@ -6,7 +6,7 @@
 
     <title>Esco Jam Collective</title>
 
-    <link rel="icon" type="image/png" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
     <!-- Bootstrap CSS -->
     <link
@@ -28,7 +28,7 @@
 
     <header>
         <!-- Navigation -->
-        <nav class="navbar" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container nav-panel">
 
                 <a class="navbar-brand" href="index.html">
@@ -39,66 +39,80 @@
                     >
                 </a>
 
-                <ul class="navbar-nav flex-row flex-wrap gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#events">Events</a>
-                    </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#main-navigation" aria-controls="main-navigation"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="navbar-nav ms-auto gap-md-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#events">Events</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero image -->
-        <section id="herohome" aria-label="Escojam Collective"></section>
+        <section id="herohome" aria-labelledby="home-title">
+            <div class="container hero-content">
+                <h1 id="home-title"><span class="red-text">Escojam</span> Collective</h1>
+                <p>A live jam and open mic for R&B, neo-soul, jazz and hip-hop in London and Kent.</p>
+                <a class="action-link" href="#events">See the next jam</a>
+            </div>
+        </section>
 
-        <p>Esco jam Collective is a live music jam night and open mic event series in the London and Kent area focused on R&B, neo-soul, jazz, and hip hop. Our goal is to provide a social environment for people to network, enjoy good music and showcase their talents. So come play, sing, rap and express yourselves! </p>
+        <section class="container pt-4" aria-labelledby="expect-title">
+            <h2 id="expect-title" class="section-heading mb-3">What to expect at a jam</h2>
+            <p class="reading-copy mx-auto">Escojam is a night for hearing live music, meeting other music lovers, and sharing the stage. Come to sing, rap, or play, or spend the evening listening.</p>
+            <p class="reading-copy mx-auto">If you’re thinking about performing for the first time, <a class="link-light" href="contact.html">get in touch</a> and we’ll talk you through how to take part.</p>
+        </section>
 
         <!-- Next Jam -->
         <section id="events" class="py-4">
             <div class="container">
                 <div class="jam-panel">
 
-                    <h1 class="text-center mb-4">
-                        The Next <span id="red-text">“JAM”</span>
-                    </h1>
-                    <p>Come and join us at our next event, a night full of creativity, collaboration and connection. We can't wait to see you there!</p>
+                    <h2 class="section-heading text-center mb-4">
+                        The Next <span class="red-text">“JAM”</span>
+                    </h2>
                     <div class="row align-items-center g-4">
 
                         <!-- Event poster -->
-                        <div class="col-md-6">
+                        <figure class="col-md-6 mb-0">
                             <img
                                 src="assets/images/nextjamposter.webp"
-                                alt="Poster for the next Escojam session"
+                                alt="Red Escojam Collective gig poster"
                                 class="img-fluid jam-poster"
+                                loading="lazy"
                             >
-                        </div>
+                            <figcaption class="poster-caption">Previous jam poster</figcaption>
+                        </figure>
 
                         <!-- Event details -->
                         <div class="col-md-6 jam-details">
-                            <h2>Escojam Live</h2>
+                            <h3>Escojam Live</h3>
 
-                            <p>
-                                A night of live R&B, soul and shared energy.
-                            </p>
-
-                            <p><strong>Date:</strong> To be announced</p>
-                            <p><strong>Doors:</strong> To be announced</p>
-                            <p><strong>Venue:</strong> To be announced</p>
-                            <p><strong>Tickets:</strong> Coming soon</p>
+                            <p>A night of live R&amp;B, soul and shared energy.</p>
+                            <p class="event-status">Date, venue, doors and ticket details will be announced soon.</p>
+                            <a class="action-link" href="https://www.instagram.com/escojamcollective/">Follow on Instagram for the announcement</a>
+                            <p class="mt-3 mb-0">Want to perform? <a class="link-light" href="contact.html">Get in touch with Escojam</a>.</p>
                         </div>
 
                     </div>
@@ -106,117 +120,77 @@
             </div>
         </section>
 
-        <!-- Meet Escojam -->
         <section id="about" class="container py-5" aria-labelledby="meet-title">
-            
+            <h2 id="meet-title" class="section-heading text-center mb-4">
+                Meet the <span class="red-text">“ESCO JAM”</span>
+            </h2>
+            <p class="reading-copy mx-auto mb-4">Meet the founders and musicians behind the collective.</p>
 
-            <div
-                id="carouselExampleCaptions"
-                class="carousel slide mx-auto"
-            ><h1 id="meet-title" class="text-center mb-4">
-                Meet the<span id="red-text">“ESCO JAM”</span>
-            </h1>
+            <div id="founder-carousel" class="carousel slide founder-carousel mx-auto"
+                 role="region" aria-label="Founders">
+                <div class="carousel-inner">
+                    <article class="carousel-item active founder-card">
+                        <img src="assets/images/joesphdrums.jpg" alt="Joseph" loading="lazy">
+                        <div class="founder-copy">
+                            <h3>Joseph</h3>
+                            <p class="founder-role">Drums</p>
+                            <p>Joseph keeps the groove on drums.</p>
+                        </div>
+                    </article>
+                    <article class="carousel-item founder-card">
+                        <img src="assets/images/joshbass.jpg" alt="Josh" loading="lazy">
+                        <div class="founder-copy">
+                            <h3>Josh</h3>
+                            <p class="founder-role">Bass</p>
+                            <p>Josh holds down the low end on bass.</p>
+                        </div>
+                    </article>
+                    <article class="carousel-item founder-card">
+                        <img src="assets/images/tomikeys.jpg" alt="Tomi" loading="lazy">
+                        <div class="founder-copy">
+                            <h3>Tomi</h3>
+                            <p class="founder-role">Keys</p>
+                            <p>Tomi brings chords and melody to the jam on keys.</p>
+                        </div>
+                    </article>
+                </div>
 
-            <p>Meet the founders and the faces behind the band, their musical inspirations and their vision for the collective</p>
-                <!-- Slide indicators -->
                 <div class="carousel-indicators">
-                    <button
-                        type="button"
-                        data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                    ></button>
-
-                    <button
-                        type="button"
-                        data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                    ></button>
-
-                    <button
-                        type="button"
-                        data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                    ></button>
+                    <button type="button" data-bs-target="#founder-carousel" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Joseph"></button>
+                    <button type="button" data-bs-target="#founder-carousel" data-bs-slide-to="1"
+                            aria-label="Josh"></button>
+                    <button type="button" data-bs-target="#founder-carousel" data-bs-slide-to="2"
+                            aria-label="Tomi"></button>
                 </div>
 
-                <!-- Slides -->
-                <div class="carousel-inner" >
-
-                    <div class="carousel-item active">
-                        <img
-                            src="assets/images/joesphdrums.jpg"
-                            class="d-block w-100"
-                            alt="Joseph, Escojam drummer"
-                        >
-
-                        <div class="carousel-caption">
-                            <h1 class="text-center mb-4">
-                        Joseph <span id="red-text">“keys”</span>
-                    </h1>
-                    <p></p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img
-                            src="assets/images/joshbass.jpg"
-                            class="d-block w-100"
-                            alt="Josh, Escojam bass player"
-                        >
-
-                        <div class="carousel-caption">
-                            <h1>Josh</h1><span id="red-text">“BASS”</span></h1>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img
-                            src="assets/images/tomikeys.jpg"
-                            class="d-block w-100"
-                            alt="Tomi, Escojam keyboard player"
-                        >
-
-                        <div class="carousel-caption">
-                            <h1>Tomi</h1>
-                            <p>Keys</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Previous button -->
-                <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev"
-                >
-                    <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev" type="button"
+                        data-bs-target="#founder-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous founder</span>
                 </button>
-
-                <!-- Next button -->
-                <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next"
-                >
-                    <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button"
+                        data-bs-target="#founder-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next founder</span>
                 </button>
-
+            </div>
+        </section>
+        <section class="container pb-5" aria-labelledby="crowd-title">
+            <h2 id="crowd-title" class="section-heading mb-4">A word from the crowd</h2>
+            <div class="crowd-quotes mx-auto">
+                <figure class="crowd-quote mb-0">
+                    <blockquote class="mb-3">
+                        <p class="mb-0">“I was nervous before my first set. Then the band picked up my rhythm, the crowd started nodding along, and I settled into it.”</p>
+                    </blockquote>
+                    <figcaption>Artist CB4 · First-time performer</figcaption>
+                </figure>
+                <figure class="crowd-quote mb-0">
+                    <blockquote class="mb-3">
+                        <p class="mb-0">“I came to listen, and my favourite part was hearing the band find a groove with each new performer. You never knew what the next song would turn into.”</p>
+                    </blockquote>
+                    <figcaption>Nailah Edwards · Guest</figcaption>
+                </figure>
             </div>
         </section>
     </main>
@@ -232,9 +206,9 @@
                         <ul class="footer-menu">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="#events">Events</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="#about">About</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -295,10 +269,6 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JavaScript -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
-    ></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
