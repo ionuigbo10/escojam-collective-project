@@ -114,8 +114,14 @@ header {
     outline-offset: 4px;
 }
 
+#herogallery,
+#herocontact {
+    height: 60vh;
+    min-height: 14rem;
+    max-height: 24rem;
+}
+
 #herogallery {
-    min-height: 70vh;
     background-image: url("../images/guitar.jpg");
     background-size: cover;
     background-position: center;
@@ -131,9 +137,6 @@ header {
 }
 
 #herocontact {
-    height: 60vh;
-    min-height: 14rem;
-    max-height: 24rem;
     background-image: url("../images/herocontact.jpg");
     background-size: cover;
     background-position: center;
