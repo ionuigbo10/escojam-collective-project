@@ -15,6 +15,15 @@ h1,
     margin-top: 2rem;
 }
 
+.heading-underline::after {
+    content: "";
+    display: block;
+    width: 28rem;
+    max-width: 100%;
+    margin: 1rem auto 0;
+    border-bottom: 3px solid #ff3535;
+}
+
 p {
     color: white;
     line-height: 1.65;
@@ -367,6 +376,24 @@ header {
         columns: 1;
     }
 }
+.performer-form {
+    padding: 1.25rem;
+    border-left: 3px solid #ff3535;
+    background-color: #181818;
+    color: #f4ebdd;
+}
+
+.performer-form .form-control,
+.performer-form .form-select {
+    border-radius: 0;
+}
+
+.performer-form .form-control:focus,
+.performer-form .form-select:focus {
+    border-color: #ff3535;
+    box-shadow: 0 0 0 0.2rem rgba(255, 53, 53, 0.3);
+}
+
 .contact-email {
     overflow-wrap: anywhere;
 }

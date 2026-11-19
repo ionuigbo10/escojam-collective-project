@@ -74,13 +74,56 @@
         <section id="herocontact" aria-label="Escojam Collective"></section>
 
         <section class="container py-4" aria-labelledby="contact-title">
-            <h1 id="contact-title">Contact Escojam Collective</h1>
-            <p class="reading-copy mx-auto">Email us if you’d like to perform at a jam, collaborate with the collective or ask about an upcoming event.</p>
+            <h1 id="contact-title" class="heading-underline">Contact Escojam Collective</h1>
+            <p class="reading-copy mx-auto">Email us if you have a question, would like to collaborate or ask about an upcoming event.</p>
             <p class="text-center">
                 <a class="action-link contact-email" href="mailto:escojamcollective@gmail.com">
                     escojamcollective@gmail.com
                 </a>
             </p>
+        </section>
+        <section id="perform" class="container pb-5" aria-labelledby="perform-title">
+            <h2 id="perform-title" class="section-heading heading-underline mb-4">Looking to perform?</h2>
+            <p class="reading-copy mx-auto">Tell us a bit about your act and what you’d like to bring to an Escojam session.</p>
+
+            <form class="performer-form reading-copy mx-auto"
+                  action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="eb729cad-d792-4b70-a806-516ac79d21ff">
+                <input type="hidden" name="subject" value="Escojam performance enquiry">
+                <div class="mb-3">
+                    <label class="form-label" for="performer-name">Full name</label>
+                    <input type="text" class="form-control" id="performer-name" name="name"
+                           autocomplete="name" maxlength="120" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="performer-artist">Artist name (optional)</label>
+                    <input type="text" class="form-control" id="performer-artist" name="artistName" maxlength="120">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="performer-email">Email address</label>
+                    <input class="form-control" id="performer-email" name="email" type="email"
+                           autocomplete="email" maxlength="254" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="performance-type">Performance type</label>
+                    <select class="form-select" id="performance-type" name="performanceType" required>
+                        <option value="" disabled selected>Choose a performance type</option>
+                        <option>Singing / Vocalist</option>
+                        <option>Rapping / MC</option>
+                        <option>Instrumentalist</option>
+                        <option>Spoken Word / Poetry</option>
+                        <option>DJ / Live Beat Set</option>
+                        <option>Duo / Group / Band</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="performance-details">Tell us about your performance (optional)</label>
+                    <textarea class="form-control" id="performance-details" name="message" rows="4"
+                              maxlength="500" placeholder="Include your instrument, whether you’re performing with others, or any equipment you’d need."></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger rounded-0">Send performance enquiry</button>
+            </form>
         </section>
     </main>
 
