@@ -18,7 +18,7 @@ p{
     font-family:'Inter' sans-serif;
     color: white;
     text-align: center;}
-    
+
 #red-text {
     color: red;
     font-size: 1.5em;
@@ -51,6 +51,14 @@ header {
 #heroabout {
     min-height: 70vh;
     background-image: url("../images/heroabout.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#herocontact {
+    min-height: 70vh;
+    background-image: url("../images/herocontact.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
