@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact | Escojam Collective</title>
+    <title>Thank you | Escojam Collective</title>
 
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
@@ -48,6 +48,9 @@
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="navbar-nav ms-auto gap-md-3">
                         <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="index.html#events">Events</a>
                         </li>
 
@@ -60,7 +63,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="action-link nav-join" href="contact.html" aria-current="page">Join us</a>
+                            <a class="action-link nav-join" href="contact.html">Join us</a>
                         </li>
                     </ul>
                 </div>
@@ -70,70 +73,22 @@
     </header>
 
     <main>
-        <!-- Hero image -->
-        <section id="herocontact" aria-label="Escojam Collective"></section>
+        <div id="herocontact"></div>
 
-        <section class="container py-4" aria-labelledby="contact-title">
-            <h1 id="contact-title" class="heading-underline">Contact Escojam Collective</h1>
-            <p class="reading-copy mx-auto">Email us if you have a question, would like to collaborate or ask about an upcoming event.</p>
-            <p class="text-center">
-                <a class="action-link contact-email" href="mailto:escojamcollective@gmail.com">
-                    escojamcollective@gmail.com
-                </a>
-            </p>
-        </section>
-        <section id="perform" class="container pb-5" aria-labelledby="perform-title">
-            <h2 id="perform-title" class="section-heading heading-underline mb-4">Looking to perform?</h2>
-            <p class="reading-copy mx-auto">Tell us a bit about your act and what you’d like to bring to an Escojam session.</p>
-
-            <form class="performer-form reading-copy mx-auto"
-                  action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="eb729cad-d792-4b70-a806-516ac79d21ff">
-                <input type="hidden" name="subject" value="Escojam performance enquiry">
-                <div class="mb-3">
-                    <label class="form-label" for="performer-name">Full name</label>
-                    <input type="text" class="form-control" id="performer-name" name="name"
-                           autocomplete="name" maxlength="120" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="performer-artist">Artist name (optional)</label>
-                    <input type="text" class="form-control" id="performer-artist" name="artistName" maxlength="120">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="performer-email">Email address</label>
-                    <input class="form-control" id="performer-email" name="email" type="email"
-                           autocomplete="email" maxlength="254" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="performance-type">Performance type</label>
-                    <select class="form-select" id="performance-type" name="performanceType" required>
-                        <option value="" disabled selected>Choose a performance type</option>
-                        <option>Singing / Vocalist</option>
-                        <option>Rapping / MC</option>
-                        <option>Instrumentalist</option>
-                        <option>Spoken Word / Poetry</option>
-                        <option>DJ / Live Beat Set</option>
-                        <option>Duo / Group / Band</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="performance-details">Tell us about your performance(optional)</label>
-                    <textarea class="form-control" id="performance-details" name="message" rows="4"
-                              maxlength="500" placeholder="Include your instrument, whether you’re performing with others, experience level or any equipment you’d need."></textarea>
-                </div>
-                <button type="submit" class="btn btn-danger rounded-0">Send performance enquiry</button>
-            </form>
+        <section class="container py-4 text-center" aria-labelledby="thank-you-title">
+            <h1 id="thank-you-title" class="heading-underline mb-4">Thank you!</h1>
+            <p class="reading-copy mx-auto">We’ve received your performance enquiry. Thanks for telling us about your act. We’re looking forward to meeting you at an Escojam session.</p>
+            <a class="action-link" href="index.html">Back to home</a>
         </section>
     </main>
 
     <!-- Footer -->
     <footer id="contact" class="site-footer">
-        <div class="container py-5 py-lg-2">
-            <div class="row g-4">
+        <div class="container py-2">
+            <div class="row gx-4 gy-2">
 
                 <!-- Navigation -->
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-5">
                     <nav aria-label="Footer navigation">
                         <ul class="footer-menu">
                             <li><a href="index.html">Home</a></li>
@@ -146,7 +101,7 @@
                 </div>
 
                 <!-- Email -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-4">
                     <a
                         href="mailto:escojamcollective@gmail.com"
                         class="footer-email"
@@ -157,7 +112,7 @@
                 </div>
 
                 <!-- Logo and social links -->
-                <div class="col-12 col-md-4 footer-branding">
+                <div class="col-12 col-md-3 footer-branding">
                     <a href="index.html">
                         <img
                             src="assets/images/escojamlogo.png"
