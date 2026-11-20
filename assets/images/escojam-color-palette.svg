@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title description">
+  <title id="title">Escojam Collective colour palette</title>
+  <desc id="description">Nine colour swatches showing the site's charcoal backgrounds, red accents, warm white text and muted text.</desc>
+  <rect width="1600" height="960" fill="#f4ebdd"/>
+  <text x="80" y="112" fill="#141414" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="2">ESCOJAM COLLECTIVE</text>
+  <text x="80" y="164" fill="#66605a" font-family="Arial, sans-serif" font-size="24">Website colour palette</text>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1">
+    <rect x="0" y="220" width="178" height="650" fill="#141414"/>
+    <text x="89" y="814" fill="#f4ebdd" text-anchor="middle">#141414</text>
+    <rect x="178" y="220" width="178" height="650" fill="#181818"/>
+    <text x="267" y="814" fill="#f4ebdd" text-anchor="middle">#181818</text>
+    <rect x="356" y="220" width="178" height="650" fill="#242424"/>
+    <text x="445" y="814" fill="#f4ebdd" text-anchor="middle">#242424</text>
+    <rect x="534" y="220" width="178" height="650" fill="#141110"/>
+    <text x="623" y="814" fill="#f4ebdd" text-anchor="middle">#141110</text>
+    <rect x="712" y="220" width="178" height="650" fill="#b82020"/>
+    <text x="801" y="814" fill="#ffffff" text-anchor="middle">#B82020</text>
+    <rect x="890" y="220" width="178" height="650" fill="#ff3535"/>
+    <text x="979" y="814" fill="#141414" text-anchor="middle">#FF3535</text>
+    <rect x="1068" y="220" width="178" height="650" fill="#ff8282"/>
+    <text x="1157" y="814" fill="#141414" text-anchor="middle">#FF8282</text>
+    <rect x="1246" y="220" width="178" height="650" fill="#f4ebdd"/>
+    <text x="1335" y="814" fill="#141414" text-anchor="middle">#F4EBDD</text>
+    <rect x="1424" y="220" width="176" height="650" fill="#beb3a8"/>
+    <text x="1512" y="814" fill="#141414" text-anchor="middle">#BEB3A8</text>
+  </g>
+  <text x="80" y="925" fill="#66605a" font-family="Arial, sans-serif" font-size="20">Charcoal backgrounds · Red highlights · Warm neutral text</text>
+</svg>
