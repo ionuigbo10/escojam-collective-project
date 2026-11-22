@@ -180,19 +180,55 @@ Each page is shown in a three-column device comparison, following the reference 
 
 ### Page screenshots
 
-These screenshots show the current Gallery, performer enquiry, and Thank-you pages. The responsive home page preview appears at the top of this README.
+The responsive preview at the top shows the homepage across desktop, laptop, tablet, and phone. The screenshots below pair desktop views with mobile captures from the site. Phone browser controls have been cropped from the mobile images for clarity.
+
+#### Home page
+
+The desktop, laptop, tablet, and phone layout is shown in the responsive preview above. These mobile captures show the homepage from the hero through the upcoming event, founders, testimonials, FAQ, and footer.
+
+<p>
+  <img src="assets/images/screenshots/mobile/home-hero.jpg" alt="Mobile homepage hero with Escojam introduction and next event button" width="220">
+  <img src="assets/images/screenshots/mobile/home-event.jpg" alt="Mobile homepage upcoming event section" width="220">
+  <img src="assets/images/screenshots/mobile/home-intro-founders.jpg" alt="Mobile homepage What to Expect and Meet the Founders sections" width="220">
+  <img src="assets/images/screenshots/mobile/home-founder-card.jpg" alt="Mobile homepage founder profile card for Joseph" width="220">
+  <img src="assets/images/screenshots/mobile/home-testimonials.jpg" alt="Mobile homepage testimonials from performers and guests" width="220">
+  <img src="assets/images/screenshots/mobile/home-faq.jpg" alt="Mobile homepage frequently asked questions and calls to action" width="220">
+  <img src="assets/images/screenshots/mobile/home-footer.jpg" alt="Mobile homepage footer with logo, social links, navigation, and email" width="220">
+</p>
 
 #### Gallery
 
-![Escojam Gallery page showing event photos](assets/images/screenshots/gallery.jpg)
+**Desktop**
+
+![Escojam Gallery page showing event photos on desktop](assets/images/screenshots/gallery.jpg)
+
+**Mobile**
+
+<p>
+  <img src="assets/images/screenshots/mobile/gallery-hero.jpg" alt="Escojam Gallery page hero on a mobile phone" width="220">
+  <img src="assets/images/screenshots/mobile/gallery-photos.jpg" alt="Escojam Gallery introduction and event photos on a mobile phone" width="220">
+</p>
 
 #### Performer enquiry form
 
-![Escojam performer enquiry form on the Contact page](assets/images/screenshots/performer-enquiry.jpg)
+**Desktop**
+
+![Escojam performer enquiry form on the Contact page at desktop size](assets/images/screenshots/performer-enquiry.jpg)
+
+**Mobile**
+
+<p>
+  <img src="assets/images/screenshots/mobile/contact-hero.jpg" alt="Contact page hero on a mobile phone" width="220">
+  <img src="assets/images/screenshots/mobile/contact-intro.jpg" alt="Contact page introduction and performer enquiry section on a mobile phone" width="220">
+  <img src="assets/images/screenshots/mobile/contact-form.jpg" alt="Performer enquiry form fields on a mobile phone" width="220">
+  <img src="assets/images/screenshots/mobile/contact-form-submit.jpg" alt="Performer enquiry form submit button and footer on a mobile phone" width="220">
+</p>
 
 #### Thank-you page
 
 ![Escojam form submission thank-you page](assets/images/screenshots/thank-you.jpg)
+
+Only a desktop screenshot was supplied for the Thank-you page.
 
 ## Acceptance criteria
 
