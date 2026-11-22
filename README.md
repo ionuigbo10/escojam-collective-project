@@ -1,6 +1,6 @@
 # Escojam Collective
 
-A responsive website for Escojam Collective, a live jam and open mic event series in London and Kent. The site introduces the collective, shares event information, showcases past sessions, and gives performers a way to send an enquiry.
+A responsive website for Escojam Collective, a community-led live music project in London and Kent. Escojam brings musicians, emerging artists, and music lovers together through collaborative jam sessions and open mic performances. The site introduces the collective, highlights upcoming events, showcases past sessions, and gives performers a way to send an enquiry.
 
 **Live site:** [Escojam Collective](https://ionuigbo10.github.io/escojam-collective-project/)
 
@@ -14,6 +14,7 @@ The homepage adapts to desktop, laptop, tablet, and phone screens.
 
 - [Project goals](#project-goals)
 - [User experience](#user-experience)
+- [User journeys](#user-journeys)
 - [Design](#design)
 - [Wireframes](#wireframes)
 - [Features](#features)
@@ -26,13 +27,22 @@ The homepage adapts to desktop, laptop, tablet, and phone screens.
 
 ## Project goals
 
+### Visitor goals
+
 The site helps visitors:
 
-- Find out what an Escojam night is like.
-- Check the next event announcement.
+- Understand Escojam’s mission and what an Escojam night is like.
+- Find upcoming event announcements and details.
 - Meet the musicians behind the collective.
 - Browse photos from past sessions.
 - Ask about performing, collaborating, or attending.
+
+### Escojam Collective goals
+
+- Explain the collective’s mission and the welcoming, collaborative spirit of its sessions.
+- Make upcoming event information easy to find and direct visitors to Escojam’s social channels for announcements.
+- Encourage emerging artists to enquire about performing and give them a straightforward way to do so.
+- Celebrate the musicians and audience who make up the Escojam community, helping new visitors picture themselves taking part.
 
 The visual design uses live event photography, dark backgrounds, red accents, and expressive typography to reflect the music and atmosphere of the sessions.
 
@@ -49,6 +59,40 @@ The main audiences are people interested in attending an event and performers in
 - As a performer, I want to contact the collective with my name, artist name, email, and performance type.
 - As a visitor, I want to learn who is behind Escojam and browse photos from previous nights.
 - As a mobile visitor, I want the navigation to collapse into a menu that is easy to use.
+
+## User journeys
+
+### Potential attendee
+
+**Scenario:** A music lover hears about Escojam and wants to know what the night is like and when the next event is happening.
+
+1. They open the home page and read the mission in the hero and introduction.
+2. They use the prominent event section to check the current announcement.
+3. If date, venue, or ticket information is not available yet, they follow Escojam on Instagram for updates.
+4. They can browse the gallery and testimonials to get a sense of the performers and atmosphere.
+
+**Acceptance criteria:**
+
+- The home page explains that Escojam brings musicians, emerging artists, and music lovers together through live collaborative sessions.
+- The upcoming event section appears directly after the hero and clearly presents available information or says when details are coming.
+- The event section links to Escojam’s Instagram for announcements.
+- The Gallery and testimonials provide a clear impression of past sessions and community.
+
+### Potential performer
+
+**Scenario:** An emerging artist wants to find out whether they can perform at an Escojam session and send an enquiry.
+
+1. They follow a performance call to action to the “Looking to perform?” form on the Contact page.
+2. They enter their full name, email address, and performance type, with optional artist name and details.
+3. They submit the form through Web3Forms.
+4. After submission, they arrive at the Thank-you page, which confirms the enquiry and links back home.
+
+**Acceptance criteria:**
+
+- Performer links take visitors directly to the enquiry form.
+- The form explains what information to provide and labels required and optional fields.
+- A valid submission is sent through Web3Forms and redirects to `thank-you.html`.
+- The Thank-you page confirms receipt and provides a route back to the home page.
 
 ## Design
 
@@ -103,10 +147,11 @@ Each page is shown in a three-column device comparison, following the reference 
 ### Home page
 
 - Hero image with a short introduction and a link to the next jam section.
-- “What to expect at a jam” introduction.
-- Next event panel with poster artwork and an announcement for details.
-- Founder carousel with biographies.
-- “A word from the crowd” testimonial cards.
+- Mission-led introduction explaining how Escojam connects musicians, emerging artists, and music lovers.
+- Prominent upcoming event section immediately below the hero, with event artwork and announcement details.
+- Founder carousel with consistent portraits, roles, and biography structure.
+- “A word from the crowd” testimonial cards with prominent quote styling and performer call to action.
+- Clear attendee and performer actions linking to upcoming events and the enquiry form.
 - FAQ built with native HTML `<details>` and `<summary>` elements.
 
 ### Gallery page
@@ -127,6 +172,22 @@ Each page is shown in a three-column device comparison, following the reference 
 
 - Confirms receipt of a performance enquiry.
 - Lets the visitor return to the homepage.
+
+### Page screenshots
+
+These screenshots show the current Gallery, performer enquiry, and Thank-you pages. The responsive home page preview appears at the top of this README.
+
+#### Gallery
+
+![Escojam Gallery page showing event photos](assets/images/screenshots/gallery.jpg)
+
+#### Performer enquiry form
+
+![Escojam performer enquiry form on the Contact page](assets/images/screenshots/performer-enquiry.jpg)
+
+#### Thank-you page
+
+![Escojam form submission thank-you page](assets/images/screenshots/thank-you.jpg)
 
 ## Acceptance criteria
 

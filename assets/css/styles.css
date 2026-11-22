@@ -1,44 +1,65 @@
-/* Google Fonts */
+/* Download the site's display and body fonts from Google Fonts. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/* Shared palette: change these values here to update colours across the site. */
+:root {
+    --color-page-background: #141414;
+    --color-footer-background: #141110;
+    --color-panel-background: #181818;
+    --color-panel-raised: #242424;
+    --color-quote-highlight: #242020;
+    --color-text-primary: #f4ebdd;
+    --color-text-muted: #beb3a8;
+    --color-accent-red: #ff3535;
+    --color-accent-red-soft: #ff8282;
+    --color-button-red: #b82020;
+    --color-button-red-hover: #a31919;
+    --color-red-text: red;
+    --color-white: white;
+}
+
+/* Shared colours and type used across every page. */
 body {
-    background-color: #141414;
+    background-color: var(--color-page-background);
     font-family: 'Inter', sans-serif;
 }
 
 h1,
 .section-heading {
     font-family: 'Sedgwick Ave Display', cursive;
-    color: white;
+    color: var(--color-white);
     text-align: center;
     font-size: 3rem;
     margin-top: 2rem;
 }
 
+/* Draw the red line under section headings without adding extra HTML. */
 .heading-underline::after {
     content: "";
     display: block;
     width: 28rem;
     max-width: 100%;
     margin: 1rem auto 0;
-    border-bottom: 3px solid #ff3535;
+    border-bottom: 3px solid var(--color-accent-red);
 }
 
 p {
-    color: white;
+    color: var(--color-white);
     line-height: 1.65;
 }
 
+/* Keep long paragraphs to a comfortable reading width. */
 .reading-copy {
     max-width: 58ch;
 }
 
 .red-text,
 #red-text {
-    color: red;
+    color: var(--color-red-text);
     font-size: 1.5em;
 }
 
+/* Place the navigation over the top of each page's hero image. */
 header {
     position: absolute;
     top: 0;
@@ -47,6 +68,7 @@ header {
     z-index: 10;
 }
 
+/* Home hero: layered dark gradients keep the text readable over the photo. */
 #herohome {
     display: grid;
     align-items: end;
@@ -71,6 +93,7 @@ header {
     font-size: 1.25rem;
 }
 
+/* Reduce the home hero type and spacing on tablet-sized screens. */
 @media (max-width: 991.98px) {
     #herohome {
         padding-bottom: 4rem;
@@ -81,6 +104,7 @@ header {
     }
 }
 
+/* Make the home hero fit smaller phone screens. */
 @media (max-width: 575.98px) {
     #herohome {
         padding-bottom: 3rem;
@@ -95,25 +119,38 @@ header {
     }
 }
 
+/* Shared red button style used for the main actions. */
 .action-link {
     display: inline-block;
     padding: 0.75rem 1.125rem;
-    background-color: #b82020;
-    color: white;
+    background-color: var(--color-button-red);
+    color: var(--color-white);
     font-weight: 700;
     text-decoration: none;
 }
 
 .action-link:hover {
-    background-color: #a31919;
-    color: white;
+    background-color: var(--color-button-red-hover);
+    color: var(--color-white);
+}
+
+.action-link-secondary {
+    border: 1px solid var(--color-accent-red);
+    background: transparent;
+    color: var(--color-text-primary);
+}
+
+.action-link-secondary:hover {
+    background: var(--color-panel-raised);
+    color: var(--color-white);
 }
 
 .action-link:focus-visible {
-    outline: 2px solid white;
+    outline: 2px solid var(--color-white);
     outline-offset: 4px;
 }
 
+/* Keep the Gallery and Contact hero photos the same height. */
 #herogallery,
 #herocontact {
     height: 60vh;
@@ -128,14 +165,6 @@ header {
     background-repeat: no-repeat;
 }
 
-#heroabout {
-    min-height: 70vh;
-    background-image: url("../images/heroabout.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 #herocontact {
     background-image: url("../images/herocontact.jpg");
     background-size: cover;
@@ -143,6 +172,7 @@ header {
     background-repeat: no-repeat;
 }
 
+/* Navigation appearance and the translucent panel behind its links. */
 .navbar {
     padding: 1rem;
 }
@@ -155,6 +185,7 @@ header {
     padding: 0.25rem 1.25rem;
 }
 
+/* Add room around links when Bootstrap collapses the menu on phones. */
 @media (max-width: 767.98px) {
     .navbar .navbar-nav {
         padding-block: 0.5rem;
@@ -172,12 +203,12 @@ header {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: #f4ebdd;
+    color: var(--color-text-primary);
     transition: color 0.2s ease;
 }
 
 .navbar .nav-link:hover {
-    color: #ff3535;
+    color: var(--color-accent-red);
 }
 
 .navbar .nav-join {
@@ -188,12 +219,13 @@ header {
     text-transform: uppercase;
 }
 
+/* Upcoming event panel and the message showing when details are pending. */
 #events {
     padding-inline: 1rem;
-    color: #f4ebdd;
+    color: var(--color-text-primary);
 }
 .jam-panel {
-    background-color: #181818;
+    background-color: var(--color-panel-background);
     padding: 1rem;
 }
 
@@ -204,7 +236,7 @@ header {
 
 .poster-caption {
     margin-top: 0.5rem;
-    color: #beb3a8;
+    color: var(--color-text-muted);
     font-size: 0.875rem;
 }
 
@@ -220,11 +252,12 @@ header {
     max-width: 42ch;
     margin-block: 1.25rem;
     padding: 0.875rem 1rem;
-    border-left: 3px solid #ff3535;
-    background: #242424;
-    color: #f4ebdd;
+    border-left: 3px solid var(--color-accent-red);
+    background: var(--color-panel-raised);
+    color: var(--color-text-primary);
 }
 
+/* Founder carousel: Bootstrap handles sliding; these rules style its frame and controls. */
 .founder-carousel {
     max-width: 38rem;
     padding-bottom: 2.5rem;
@@ -240,26 +273,29 @@ header {
 .founder-carousel .carousel-control-next-icon {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #b82020;
+    background-color: var(--color-button-red);
     background-size: 55%;
 }
 
 .founder-carousel button:focus-visible {
-    outline: 2px solid white;
+    outline: 2px solid var(--color-white);
     outline-offset: -2px;
 }
 
 .founder-card {
     overflow: hidden;
-    background: #181818;
-    color: #f4ebdd;
+    background: var(--color-panel-background);
+    color: var(--color-text-primary);
 }
 
+/* Contain portraits so the full photo stays visible without cropping. */
 .founder-card img {
     display: block;
     width: 100%;
     height: 26rem;
     object-fit: contain;
+    object-position: center;
+    background: var(--color-panel-raised);
 }
 
 .founder-copy {
@@ -279,10 +315,31 @@ header {
 
 .founder-role {
     margin-bottom: 0.75rem;
-    color: #ff8282;
+    color: var(--color-accent-red-soft);
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
+.founder-bio-label {
+    margin-bottom: 0.4rem;
+    color: var(--color-accent-red-soft);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.mission-actions,
+.home-next-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 58ch;
+}
+
+/* Shorter founder photos and controls on phones. */
 @media (max-width: 767.98px) {
     .founder-card img,
     .founder-carousel .carousel-control-prev,
@@ -291,6 +348,7 @@ header {
     }
 }
 
+/* Show testimonial cards in one column on phones and two on wider screens. */
 .crowd-quotes {
     display: grid;
     gap: 1rem;
@@ -306,14 +364,21 @@ header {
 .crowd-quote {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
-    border-left: 3px solid #ff3535;
-    background-color: #181818;
-    color: #f4ebdd;
+    min-height: 100%;
+    padding: 2rem;
+    border-top: 4px solid var(--color-accent-red);
+    background: linear-gradient(145deg, var(--color-quote-highlight), var(--color-panel-background) 65%);
+    color: var(--color-text-primary);
+    box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 24%);
+}
+
+.crowd-quote blockquote p {
+    font-size: 1.15rem;
+    line-height: 1.7;
 }
 
 .crowd-quote-mark {
-    color: #ff3535;
+    color: var(--color-accent-red);
     font-size: 2.5em;
     font-weight: 700;
     line-height: 0;
@@ -322,13 +387,34 @@ header {
 
 .crowd-quote figcaption {
     margin-top: auto;
+    padding-top: 1rem;
+    color: #ffb0b0;
+    font-weight: 700;
 }
 
+@media (max-width: 575.98px) {
+    .mission-actions,
+    .home-next-steps {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .mission-actions .action-link,
+    .home-next-steps .action-link {
+        text-align: center;
+    }
+
+    .crowd-quote {
+        padding: 1.5rem;
+    }
+}
+
+/* Native FAQ disclosures; the browser opens and closes each answer. */
 .faq-item {
     margin-bottom: 0.75rem;
-    border-left: 3px solid #ff3535;
-    background-color: #181818;
-    color: #f4ebdd;
+    border-left: 3px solid var(--color-accent-red);
+    background-color: var(--color-panel-background);
+    color: var(--color-text-primary);
 }
 
 .faq-item summary {
@@ -338,11 +424,11 @@ header {
 }
 
 .faq-item summary::marker {
-    color: #ff8282;
+    color: var(--color-accent-red-soft);
 }
 
 .faq-item summary:focus-visible {
-    outline: 2px solid white;
+    outline: 2px solid var(--color-white);
     outline-offset: -2px;
 }
 
@@ -351,11 +437,11 @@ header {
     padding: 0 1rem 1rem;
 }
 
-/*gallery styles*/
+/* Gallery photos flow into columns; media queries reduce columns as space narrows. */
 
 .gallery-page {
     padding-top: 30px;
-    color: #f4ebdd;
+    color: var(--color-text-primary);
 }
 
 .gallery-page p {
@@ -390,11 +476,12 @@ header {
         columns: 1;
     }
 }
+/* Form panel and focus outline help users see which field they are filling in. */
 .performer-form {
     padding: 1.25rem;
-    border-left: 3px solid #ff3535;
-    background-color: #181818;
-    color: #f4ebdd;
+    border-left: 3px solid var(--color-accent-red);
+    background-color: var(--color-panel-background);
+    color: var(--color-text-primary);
 }
 
 .performer-form .form-control,
@@ -404,7 +491,7 @@ header {
 
 .performer-form .form-control:focus,
 .performer-form .form-select:focus {
-    border-color: #ff3535;
+    border-color: var(--color-accent-red);
     box-shadow: 0 0 0 0.2rem rgba(255, 53, 53, 0.3);
 }
 
@@ -412,23 +499,23 @@ header {
     overflow-wrap: anywhere;
 }
 
-/*footer styles */
+/* Footer background, shared link colours, and navigation layout. */
 
 .site-footer {
-    background-color: #141110;
-    color: #f4ebdd;
-    border-top: 3px solid #ff3535;
+    background-color: var(--color-footer-background);
+    color: var(--color-text-primary);
+    border-top: 3px solid var(--color-accent-red);
     margin-top: 3rem;
 }
 
 .site-footer a {
-    color: #f4ebdd;
+    color: var(--color-text-primary);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .site-footer a:hover {
-    color: #ff3535;
+    color: var(--color-accent-red);
 }
 
 /* Left-hand navigation */
@@ -448,7 +535,7 @@ header {
 .footer-menu li + li::before {
     content: "|" / "";
     margin-inline: 0.35rem;
-    color: #beb3a8;
+    color: var(--color-text-muted);
 }
 
 .footer-menu a {
@@ -506,19 +593,44 @@ header {
     text-align: center;
     margin-top: 0.25rem;
     font-size: 0.875rem;
-    color: #beb3a8;
+    color: var(--color-text-muted);
 }
 
-/* Stack and align left on smaller screens */
+/* On phones, CSS order puts the logo/socials above the navigation and email. */
 @media (max-width: 767.98px) {
     .footer-branding {
+        order: 1;
         text-align: left;
     }
 
     .footer-socials {
         justify-content: flex-start;
     }
+
+    .footer-navigation {
+        order: 2;
+    }
+
+    .footer-email-column {
+        order: 3;
+    }
 }
+
+/* Restore the desktop order: navigation, email, then logo/social links. */
+@media (min-width: 768px) {
+    .footer-navigation {
+        order: 1;
+    }
+
+    .footer-email-column {
+        order: 2;
+    }
+
+    .footer-branding {
+        order: 3;
+    }
+}
+/* Add space for the sticky desktop navigation when jumping to page sections. */
 @media (min-width: 992px) {
     html {
         scroll-padding-top: 7rem;

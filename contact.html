@@ -8,26 +8,26 @@
 
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap provides layout classes and component styling. -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
-    <!-- Bootstrap Icons -->
+    <!-- Bootstrap Icons supplies the email and social media symbols. -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         rel="stylesheet"
     >
 
-    <!-- Your CSS -->
+    <!-- This stylesheet adds Escojam-specific colours and page layouts. -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
     <header>
-        <!-- Navigation -->
+        <!-- Bootstrap collapses these links into a menu on smaller screens. -->
         <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container nav-panel">
 
@@ -73,24 +73,30 @@
     </header>
 
     <main>
-        <!-- Hero image -->
+        <!-- Decorative image at the top of the Contact page. -->
         <section id="herocontact" aria-label="Escojam Collective"></section>
 
+        <!-- General contact details for visitors who are not applying to perform. -->
         <section class="container py-4" aria-labelledby="contact-title">
             <h1 id="contact-title" class="heading-underline">Contact Escojam Collective</h1>
-            <p class="reading-copy mx-auto">Email us if you have a question, would like to collaborate or ask about an upcoming event.</p>
+            <p class="reading-copy mx-auto">Want to attend, perform or collaborate? Find out about upcoming events or email us with your question.</p>
             <p class="text-center">
+                <a class="action-link" href="index.html#events">See upcoming events</a>
+            </p>
+            <p class="text-center mt-3">
                 <a class="action-link contact-email" href="mailto:escojamcollective@gmail.com">
                     escojamcollective@gmail.com
                 </a>
             </p>
         </section>
+        <!-- Performer application: Web3Forms processes this form and then redirects to thank-you.html. -->
         <section id="perform" class="container pb-5" aria-labelledby="perform-title">
             <h2 id="perform-title" class="section-heading heading-underline mb-4">Looking to perform?</h2>
-            <p class="reading-copy mx-auto">Tell us a bit about your act and what you’d like to bring to an Escojam session.</p>
+            <p class="reading-copy mx-auto">Ready to share the stage? Tell us about your act and we’ll be in touch about taking part in an upcoming Escojam session.</p>
 
             <form class="performer-form reading-copy mx-auto"
                   action="https://api.web3forms.com/submit" method="POST">
+                <!-- Hidden settings tell Web3Forms which account receives the enquiry and where to redirect. -->
                 <input type="hidden" name="access_key" value="eb729cad-d792-4b70-a806-516ac79d21ff">
                 <input type="hidden" name="subject" value="Escojam performance enquiry">
                 <input type="hidden" name="redirect" value="https://ionuigbo10.github.io/escojam-collective-project/thank-you.html">
@@ -137,7 +143,7 @@
             <div class="row gx-4 gy-2">
 
                 <!-- Navigation -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5 footer-navigation">
                     <nav aria-label="Footer navigation">
                         <ul class="footer-menu">
                             <li><a href="index.html">Home</a></li>
@@ -150,7 +156,7 @@
                 </div>
 
                 <!-- Email -->
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 footer-email-column">
                     <a
                         href="mailto:escojamcollective@gmail.com"
                         class="footer-email"

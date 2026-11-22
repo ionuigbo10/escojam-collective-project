@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Esco Jam Collective</title>
+    <title>Escojam Collective</title>
 
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap provides layout classes and component styling. -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
-    <!-- Bootstrap Icons -->
+    <!-- Bootstrap Icons supplies the email and social media symbols. -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         rel="stylesheet"
     >
 
-    <!-- Your CSS -->
+    <!-- This stylesheet adds Escojam-specific colours and page layouts. -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
     <header>
-        <!-- Navigation -->
+        <!-- Bootstrap collapses these links into a menu on smaller screens. -->
         <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container nav-panel">
 
@@ -70,27 +70,22 @@
     </header>
 
     <main>
+        <!-- The hero introduces Escojam and links visitors straight to event details. -->
         <section id="herohome" aria-labelledby="home-title">
             <div class="container hero-content">
                 <h1 id="home-title"><span class="red-text">Escojam</span> Collective</h1>
-                <p>A live jam and open mic for R&B, neo-soul, jazz and hip-hop in London and Kent.</p>
-                <a class="action-link" href="#events">See the next jam</a>
+                <p>A community-led live music collective bringing musicians, emerging artists and music lovers together through collaborative jam sessions and open mic performances across London and Kent.</p>
+                <a class="action-link" href="#events">Find the next event</a>
             </div>
         </section>
 
-        <section class="container pt-4" aria-labelledby="expect-title">
-            <h2 id="expect-title" class="section-heading heading-underline mb-3">What to expect at a jam</h2>
-            <p class="reading-copy mx-auto">Escojam is a night for hearing live music, meeting other music lovers, and sharing the stage. Come to sing, rap, or play, or spend the evening listening.</p>
-            <p class="reading-copy mx-auto">If you’re thinking about performing for the first time, <a class="link-light" href="contact.html">get in touch</a> and we’ll talk you through how to take part.</p>
-        </section>
-
-        <!-- Next Jam -->
-        <section id="events" class="py-4">
+        <!-- Keep the next event near the top so visitors can find updates quickly. -->
+        <section id="events" class="py-5" aria-labelledby="events-title">
             <div class="container">
                 <div class="jam-panel">
 
-                    <h2 class="section-heading text-center mb-4">
-                        The Next <span class="red-text">“JAM”</span>
+                    <h2 id="events-title" class="section-heading text-center mb-4">
+                        Upcoming <span class="red-text">Escojam</span> Event
                     </h2>
                     <div class="row align-items-center g-4">
 
@@ -102,17 +97,17 @@
                                 class="img-fluid jam-poster"
                                 loading="lazy"
                             >
-                            <figcaption class="poster-caption">Previous jam poster</figcaption>
+                            <figcaption class="poster-caption">Event artwork</figcaption>
                         </figure>
 
                         <!-- Event details -->
                         <div class="col-md-6 jam-details">
                             <h3>Escojam Live</h3>
 
-                            <p>A night of live R&amp;B, soul and shared energy.</p>
-                            <p class="event-status">Date, venue, doors and ticket details will be announced soon.</p>
-                            <a class="action-link" href="https://www.instagram.com/escojamcollective/">Follow on Instagram for the announcement</a>
-                            <p class="mt-3 mb-0">Want to perform? <a class="link-light" href="contact.html">Get in touch with Escojam</a>.</p>
+                            <p>A night of live R&amp;B, soul and shared energy, bringing artists and audiences together.</p>
+                            <p class="event-status"><strong>Event details coming soon</strong><br>Date, venue, doors and ticket information will be announced here.</p>
+                            <a class="action-link" href="https://www.instagram.com/escojamcollective/">Follow Escojam for event updates</a>
+                <p class="mt-3 mb-0">Want to perform? <a class="link-light" href="contact.html#perform">Tell us about your act</a>.</p>
                         </div>
 
                     </div>
@@ -120,9 +115,20 @@
             </div>
         </section>
 
+        <!-- Explain the collective's purpose and who is welcome at a session. -->
+        <section class="container pt-4" aria-labelledby="expect-title">
+            <h2 id="expect-title" class="section-heading heading-underline mb-3">What to expect at an Escojam</h2>
+            <p class="reading-copy mx-auto">Escojam exists to create a welcoming space where musicians can collaborate, emerging artists can share the stage, and music lovers can connect through live music. Come to sing, rap, play, or simply enjoy the music.</p>
+            <div class="mission-actions mx-auto">
+                <a class="action-link" href="#events">See upcoming events</a>
+                <a class="action-link action-link-secondary" href="contact.html#perform">Apply to perform</a>
+            </div>
+        </section>
+
+        <!-- Bootstrap carousel: each .carousel-item is one founder profile. -->
         <section id="about" class="container py-5" aria-labelledby="meet-title">
             <h2 id="meet-title" class="section-heading text-center mb-4">
-                Meet the <span class="red-text">“ESCO JAM”</span>
+                Meet the <span class="red-text">Escojam</span>
             </h2>
             <p class="reading-copy mx-auto mb-4">Meet the founders and musicians behind the collective.</p>
 
@@ -130,26 +136,29 @@
                  role="region" aria-label="Founders">
                 <div class="carousel-inner">
                     <article class="carousel-item active founder-card">
-                        <img src="assets/images/joesphdrums.jpg" alt="Joseph" loading="lazy">
+                        <img src="assets/images/joesphdrums.jpg" alt="Joseph, Escojam drummer" loading="lazy">
                         <div class="founder-copy">
                             <h3>Joseph</h3>
-                            <p class="founder-role">Drums</p>
+                            <p class="founder-role">Founder <span aria-hidden="true">·</span> Drums</p>
+                            <p class="founder-bio-label">Musical journey</p>
                             <p>I play many instruments, but drumming is my passion. I started playing on pots and pans at the age of three and kept it going through choirs as I grew up. My biggest inspiration is none other than the King of Pop, Michael Jackson. My ambition is to publish my music, build relationships with artists and producers, and grow a network of creatives. I want Escojam to be a global powerhouse.</p>
                         </div>
                     </article>
                     <article class="carousel-item founder-card">
-                        <img src="assets/images/joshbass.jpg" alt="Josh" loading="lazy">
+                        <img src="assets/images/joshbass.jpg" alt="Josh, Escojam bassist" loading="lazy">
                         <div class="founder-copy">
                             <h3>Josh</h3>
-                            <p class="founder-role">Bass</p>
+                            <p class="founder-role">Founder <span aria-hidden="true">·</span> Bass</p>
+                            <p class="founder-bio-label">Musical journey</p>
                             <p>I fell in love with bass after watching Sharay Reid and haven’t stopped since. I love music because it connects us, and I look forward to growing this into gigs and festivals.</p>
                         </div>
                     </article>
                     <article class="carousel-item founder-card">
-                        <img src="assets/images/tomikeys.jpg" alt="Tomi" loading="lazy">
+                        <img src="assets/images/tomikeys.jpg" alt="Tomi, Escojam keys player" loading="lazy">
                         <div class="founder-copy">
                             <h3>Tomi</h3>
-                            <p class="founder-role">Keys</p>
+                            <p class="founder-role">Founder <span aria-hidden="true">·</span> Keys</p>
+                            <p class="founder-bio-label">Musical journey</p>
                             <p>I started playing drums in church from the age of 8 and picked up the keys shortly after. My musical inspiration is Stevie Wonder. My vision for Escojam is to meet like-minded music lovers and create a community.</p>
                         </div>
                     </article>
@@ -176,8 +185,10 @@
                 </button>
             </div>
         </section>
+        <!-- Testimonials add first-hand perspectives from performers and guests. -->
         <section class="container pb-5" aria-labelledby="crowd-title">
             <h2 id="crowd-title" class="section-heading heading-underline mb-4">A word from the crowd</h2>
+            <p class="reading-copy mx-auto mb-4">Hear from the artists and guests who make each Escojam session special.</p>
             <div class="crowd-quotes mx-auto">
                 <figure class="crowd-quote mb-0">
                     <blockquote class="mb-3">
@@ -192,7 +203,9 @@
                     <figcaption>Nailah Edwards · Guest</figcaption>
                 </figure>
             </div>
+            <p class="text-center mt-4 mb-0"><a class="action-link" href="contact.html#perform">Join the next session</a></p>
         </section>
+        <!-- Native details/summary elements make each FAQ open without custom JavaScript. -->
         <section class="container pb-5" aria-labelledby="faq-title">
             <h2 id="faq-title" class="section-heading heading-underline mb-4">Frequently asked questions</h2>
 
@@ -211,9 +224,13 @@
                 </details>
                 <details class="faq-item">
                     <summary>Where can I find event and ticket details?</summary>
-                    <p>Check <a class="link-light" href="#events">The Next Jam</a> for updates on the date, venue, doors and tickets.</p>
+                    <p>Check <a class="link-light" href="#events">Upcoming Escojam events</a> for updates on the date, venue, doors and tickets.</p>
                 </details>
                 <p class="mt-3 mb-0">Still have a question? <a class="link-light" href="contact.html">Contact Escojam</a>.</p>
+                <div class="home-next-steps mt-4">
+                    <a class="action-link" href="#events">Explore upcoming events</a>
+                    <a class="action-link action-link-secondary" href="contact.html#perform">Enquire about performing</a>
+                </div>
             </div>
         </section>
     </main>
@@ -224,7 +241,7 @@
             <div class="row gx-4 gy-2">
 
                 <!-- Navigation -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5 footer-navigation">
                     <nav aria-label="Footer navigation">
                         <ul class="footer-menu">
                             <li><a href="index.html">Home</a></li>
@@ -237,7 +254,7 @@
                 </div>
 
                 <!-- Email -->
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 footer-email-column">
                     <a
                         href="mailto:escojamcollective@gmail.com"
                         class="footer-email"
