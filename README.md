@@ -19,6 +19,11 @@ The homepage adapts to desktop, laptop, tablet, and phone screens.
 - [Wireframes](#wireframes)
 - [Features](#features)
 - [Acceptance criteria](#acceptance-criteria)
+- [Testing](#testing)
+  - [W3C HTML Checker](#w3c-html-checker)
+  - [W3C CSS Validator](#w3c-css-validator)
+  - [Lighthouse mobile testing](#lighthouse-mobile-testing)
+  - [Bugs and fixes](#bugs-and-fixes)
 - [Accessibility](#accessibility)
 - [Technologies and tools](#technologies-and-tools)
 - [Run locally](#run-locally)
@@ -223,6 +228,89 @@ These screenshots show the current Gallery, performer enquiry, and Thank-you pag
 - Navigation, carousel controls, form fields, and FAQ disclosures are operable by keyboard.
 - Text and controls remain distinguishable against the dark backgrounds.
 
+## Testing
+
+### W3C HTML Checker
+
+The project HTML pages were uploaded to the [W3C Nu HTML Checker](https://validator.w3.org/nu/). The screenshots below show that `index.html`, `gallery.html`, `contact.html`, and `thank-you.html` completed validation with **no errors or warnings**. The checks were run on 22 November 2026 with vnu 26.11.20.
+
+#### Home page (`index.html`)
+
+![Nu HTML Checker result for index.html: no errors or warnings](assets/images/screenshots/validation-index-html.png)
+
+#### Gallery page (`gallery.html`)
+
+![Nu HTML Checker result for gallery.html: no errors or warnings](assets/images/screenshots/validation-gallery-html.png)
+
+#### Contact page (`contact.html`)
+
+![Nu HTML Checker result for contact.html: no errors or warnings](assets/images/screenshots/validation-contact-html.png)
+
+#### Thank-you page (`thank-you.html`)
+
+![Nu HTML Checker result for thank-you.html: no errors or warnings](assets/images/screenshots/validation-thank-you-html.png)
+
+### W3C CSS Validator
+
+The CSS submitted to the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) validated against CSS Level 3 + SVG with **no errors found**. The result also reports **three warnings**; warnings are distinct from errors, and the supplied screenshot does not show their individual details.
+
+![W3C CSS Validation Service result: no errors found and three warnings reported](assets/images/screenshots/validation-css.png)
+
+### Lighthouse mobile testing
+
+Lighthouse audits were run on the deployed Home, Gallery, and Contact pages on 22 November 2026. Each report used a Moto G Power emulation, Slow 4G throttling, Chromium 157, and Lighthouse 13.5.0. These are single-run results; Lighthouse scores can vary between runs. The reports also note that Lighthouse 13.6.0 was available.
+
+#### Category scores
+
+| Page | Performance | Accessibility | Best Practices | Report |
+| --- | ---: | ---: | ---: | --- |
+| Home (`index.html`) | 74 | 100 | 100 | [View report](https://googlechrome.github.io/lighthouse/viewer/?gist=c599d8d871aa30d1a8b53c5f76d4995d) |
+| Gallery (`gallery.html`) | 65 | 100 | 100 | [View report](https://googlechrome.github.io/lighthouse/viewer/?gist=63991b1126adc740d60d4ce417b061e7) |
+| Contact (`contact.html`) | 56 | 100 | 100 | [View report](https://googlechrome.github.io/lighthouse/viewer/?gist=2a63b4bffe5fa5668044ce05f854188b) |
+
+#### Performance metrics
+
+| Page | First Contentful Paint | Largest Contentful Paint | Total Blocking Time | Cumulative Layout Shift | Speed Index |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Home | 2.1 s | 7.6 s | 0 ms | 0 | 2.1 s |
+| Gallery | 2.7 s | 9.7 s | 0 ms | 0.148 | 2.7 s |
+| Contact | 4.6 s | 7.4 s | 160 ms | 0 | 30.3 s |
+
+#### Review of the results
+
+The Home page has the strongest Performance score at 74, followed by Gallery at 65 and Contact at 56. All three pages scored 100 for Accessibility and Best Practices. The results suggest that the main challenge is how quickly visual content loads, rather than extensive main-thread blocking: Total Blocking Time is 0 ms on Home and Gallery, and 160 ms on Contact.
+
+Largest Contentful Paint is slow on every page, ranging from 7.4 to 9.7 seconds. Gallery has the slowest LCP and a Cumulative Layout Shift of 0.148, so its content also moves during loading. Contact has the lowest Performance score and a 30.3-second Speed Index, with First Contentful Paint at 4.6 seconds. These make the Contact page and the Gallery's initial content the clearest areas to improve.
+
+Across the reports, Lighthouse flags image delivery, render-blocking requests, and cache lifetimes. Optimising large images and reducing resources that delay the first render are likely useful next steps; reserving image dimensions may also help reduce layout movement on Gallery. These are lab results from one simulated mobile run per page, so they can vary and may not match every visitor's device or connection.
+
+#### Screenshot evidence
+
+<table>
+  <thead>
+    <tr>
+      <th>Home page</th>
+      <th>Gallery page</th>
+      <th>Contact page</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="assets/images/screenshots/lighthouse-index-mobile.png"><img src="assets/images/screenshots/lighthouse-index-mobile.png" alt="Mobile Lighthouse report for the home page: Performance 74, Accessibility 100, Best Practices 100" width="280"></a></td>
+      <td><a href="assets/images/screenshots/lighthouse-gallery-mobile.png"><img src="assets/images/screenshots/lighthouse-gallery-mobile.png" alt="Mobile Lighthouse report for the gallery page: Performance 65, Accessibility 100, Best Practices 100" width="280"></a></td>
+      <td><a href="assets/images/screenshots/lighthouse-contact-mobile.png"><img src="assets/images/screenshots/lighthouse-contact-mobile.png" alt="Mobile Lighthouse report for the contact page: Performance 56, Accessibility 100, Best Practices 100" width="280"></a></td>
+    </tr>
+  </tbody>
+</table>
+
+### Bugs and fixes
+
+| Issue reported | Fix or outcome |
+| --- | --- |
+| The collapsed mobile navbar changed to black. | Updated the small-screen navbar styling so it keeps the site's existing colour. |
+| Joseph's founder portrait appeared cropped in the profile card. | Adjusted the portrait display so his photo is shown correctly in the founder card. |
+| During local form testing, submission opened Web3Forms instead of the thank-you page. | The Web3Forms redirect points to the published `thank-you.html`; the deployed submission was confirmed to reach that page. The local and deployed flows behaved differently during testing. |
+
 ## Accessibility
 
 - Pages use semantic landmarks such as `header`, `nav`, `main`, `section`, and `footer`.
@@ -263,7 +351,7 @@ The Web3Forms redirect in `contact.html` points to the deployed `thank-you.html`
 
 ## Credits
 
-- Event photography and project images are stored in `assets/images/`.
+- Event photography was supplied directly by Escojam Collective and is stored in `assets/images/`.
 - [Bootstrap](https://getbootstrap.com/) provides the responsive layout, navigation, and carousel components.
 - [Bootstrap Icons](https://icons.getbootstrap.com/) provides the social and email icons.
 - [Google Fonts](https://fonts.google.com/) provides the site typography.
